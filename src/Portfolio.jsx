@@ -2,104 +2,23 @@ import { motion } from "framer-motion";
 import React from "react";
 import Button from "@mui/material/Button";
 
+// NOTE: The following components would be in separate files, e.g., src/components/Navbar.jsx
+// For this example, they are defined here for simplicity, but should be imported.
+import Navbar from "./Navbar";
+import Hero from "./Hero";
+import SkillsEducation from "./SkillsEducation";
+
 export default function Portfolio() {
   return (
     <div className="bg-white text-gray-900 font-sans">
       {/* Navbar */}
-      <nav className="sticky top-0 z-50 bg-white shadow-md">
-        <div className="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
-          <a href="#" className="text-2xl font-bold text-gray-900">
-            Kripal Singh
-          </a>
-          <div className="hidden md:flex space-x-6">
-            <a href="#work" className="text-gray-600 hover:text-blue-500 font-semibold transition-colors duration-300">
-              Work
-            </a>
-            <a href="#blog" className="text-gray-600 hover:text-blue-500 font-semibold transition-colors duration-300">
-              Blog
-            </a>
-            <a href="#contact" className="text-gray-600 hover:text-blue-500 font-semibold transition-colors duration-300">
-              Contact
-            </a>
-          </div>
-        </div>
-      </nav>
+      <Navbar />
+
       {/* Hero Section */}
-      <section className="max-w-5xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-10 items-center">
-        <div>
-          <h1 className="text-4xl md:text-5xl font-bold mb-2">Hi, I am Kripal Krishna Singh</h1>
-          <h2 className="text-2xl md:text-3xl font-semibold mb-4">Senior Associate Consultant – Front-End Developer</h2>
-          <div className="mb-4 text-gray-700">
-            <div className="mb-1">
-              <a href="mailto:kripal.hec@gmail.com" className="text-blue-600 hover:underline">
-                kripal.hec@gmail.com
-              </a>{" "}
-              |{" "}
-              <a href="tel:+918149345927" className="hover:underline">
-                +91 8149345927
-              </a>
-            </div>
-            <div className="mb-1">
-              <a href="https://linkedin.com/in/kripal-singh-a9989512a" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
-                LinkedIn
-              </a>{" "}
-              |{" "}
-              <a href="https://github.com/kripal004" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
-                GitHub
-              </a>
-            </div>
-          </div>
-          <p className="text-gray-600 mb-6">
-            Frontend developer with strong expertise in React.js, TypeScript, and modern state management (Redux). Proficient in building reusable UI components, responsive and accessible designs. Experienced with CI/CD, REST APIs, Agile/Scrum, and automated testing.
-          </p>
-          <Button component="a" href="/kripal-krishna-singh/assets/260725.pdf" target="_blank" download>
-            Download Resume
-          </Button>
-        </div>
-        <div className="flex justify-center md:justify-end">
-          <img
-            src="/kripal-krishna-singh/assets/Bio.jpg"
-            alt="Profile"
-            className="w-48 h-48 rounded-full object-cover shadow-lg"
-          />
-        </div>
-      </section>
+      <Hero />
 
       {/* Skills & Education */}
-      <section className="max-w-5xl mx-auto px-6 py-8 grid md:grid-cols-2 gap-10">
-        <div>
-          <h3 className="text-xl font-semibold mb-2">Skills</h3>
-          <ul className="list-disc list-inside text-gray-700 text-sm space-y-1">
-            <li><b>Languages:</b> JavaScript, TypeScript</li>
-            <li><b>Front-End:</b> React.js, Next.js, Redux, HTML5, CSS3, SCSS, Tailwind CSS, Material-UI</li>
-            <li><b>State Management:</b> Redux Toolkit, Redux Saga, Zustand, React Context API</li>
-            <li><b>UI/UX:</b> Figma, Adobe XD, Canva</li>
-            <li><b>Testing:</b> Jest, React Testing Library, Cypress, Vitest</li>
-            <li><b>Version Control:</b> Git, GitHub, Bitbucket, Jira, VersionOne, ServiceNow</li>
-            <li><b>Cloud & DevOps:</b> AWS (S3, CloudFront), Docker, Jenkins, Vercel</li>
-            <li><b>Tools:</b> VS Code, Chrome DevTools, Postman, Webpack, Vite</li>
-            <li><b>Databases (Basic):</b> MongoDB, MySQL, Firebase</li>
-          </ul>
-        </div>
-        <div>
-          <h3 className="text-xl font-semibold mb-2">Education</h3>
-          <div className="text-gray-700 text-sm mb-4">
-            <b>Yeshwantrao Chavan College of Engineering</b><br />
-            B.E. (Computer Technology), May 2020<br />
-            Nagpur, IN
-          </div>
-          <div className="text-gray-700 text-sm">
-            <b>Senior Secondary (12th Grade)</b><br />
-            NIOS<br />
-            Ranchi, IN
-          </div>
-          <div className="text-gray-700 text-sm mt-2">
-            <b>Secondary (10th Grade)</b><br />
-            CBSE<br />
-            Ranchi, IN
-          </div>
-        </div>
-      </section>
+      <SkillsEducation />
 
       {/* Experience */}
       <section className="max-w-5xl mx-auto px-6 py-8">
