@@ -28,15 +28,44 @@ export default function Experience() {
         "Streamlined development cycles and ensured on-time feature delivery by integrating seamlessly with Agile/Scrum methodologies, managing workflows in Jira and ServiceNow, and consistently delivering a high volume of production-ready features.",
       ],
     },
-    // ... Add other job objects here
+    {
+      title: "React.js Developer",
+      company: "Aventior Digital Pvt. Ltd.",
+      duration: "Dec 2020 – Apr 2024",
+      location: "Pune, IN",
+      points: [
+        "Spearheaded the development and maintenance of key SPA features using React.js, integrating with complex REST APIs to deliver a responsive and data-rich user experience within an Agile framework.",
+        "Managed end-to-end delivery of four major version releases, independently handling full feature modules from concept to deployment, ensuring a high level of quality and stability.",
+        "Improved code maintainability and scalability by refactoring legacy components, introducing modern React patterns like custom hooks and the Context API.",
+        "Optimized application performance through strategic implementation of techniques like lazy loading, memoization, and route-based rendering.",
+      ],
+    },
+    {
+      title: "Web Designer Intern",
+      company: "Take IT Ideas Innovative Solutions",
+      duration: "Jan 2020 – July 2020",
+      location: "Nagpur, IN",
+      points: [
+        "Assisted in frontend development and UI design, gaining hands-on experience with core technologies including HTML, CSS, and JavaScript.",
+        "Enhanced UI consistency across internal dashboards by customizing existing layouts and adhering to design guidelines.",
+        "Developed a foundational understanding of the complete frontend development lifecycle and applied principles of responsive design.",
+      ],
+    },
   ];
 
   return (
     <section className="max-w-5xl mx-auto px-6 py-8">
       <h3 className="text-xl font-semibold mb-4">Experience</h3>
-      {/* You can map over an array of experiences here */}
-      <Job {...experiences[0]} />
-      {/* ... and so on for other jobs */}
+      {experiences.map((job, index) => (
+        <Job
+          key={index}
+          title={job.title}
+          company={job.company}
+          duration={job.duration}
+          location={job.location}
+          points={job.points}
+        />
+      ))}
     </section>
   );
 }

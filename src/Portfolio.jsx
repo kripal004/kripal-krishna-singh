@@ -1,7 +1,6 @@
 import React from "react";
 
-// NOTE: The following components would be in separate files, e.g., src/components/Navbar.jsx
-// For this example, they are defined here for simplicity, but should be imported.
+// NOTE: The following components would be in separate files, e.g., src/Navbar.jsx
 import Navbar from "./Navbar";
 import Hero from "./Hero";
 import SkillsEducation from "./SkillsEducation";
