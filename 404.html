@@ -4,11 +4,21 @@
     <meta charset="utf-8" />
     <title>Page Not Found</title>
     <script>
+      // Single Page Apps for GitHub Pages
+      // MIT License
+      // https://github.com/rafgraph/spa-github-pages
+      // This script prevents the `404` error that occurs when a user refreshes a page on GitHub Pages.
+      // It redirects all requests to the root index.html, allowing the React Router to handle the URL.
       (function() {
-        // Get the current path without the repository name
-        var path = window.location.pathname.replace(/^(\/[^/]+)/, '');
-        // Redirect to the home page with the full path
-        window.location.replace(window.location.origin + '/kripal-krishna-singh' + path);
+        var pathSegmentsToKeep = 1;
+        var l = window.location;
+        l.replace(
+          l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+          l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
+          l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+          (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+          l.hash
+        );
       }());
     </script>
   </head>
