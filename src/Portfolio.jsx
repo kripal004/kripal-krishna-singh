@@ -52,13 +52,13 @@ export default function Portfolio() {
           <p className="text-gray-600 mb-6">
             Frontend developer with strong expertise in React.js, TypeScript, and modern state management (Redux). Proficient in building reusable UI components, responsive and accessible designs. Experienced with CI/CD, REST APIs, Agile/Scrum, and automated testing.
           </p>
-          <Button component="a" href="../assets/260725.pdf" target="_blank" download>
+          <Button component="a" href="/kripal-krishna-singh/assets/260725.pdf" target="_blank" download>
             Download Resume
           </Button>
         </div>
         <div className="flex justify-center md:justify-end">
           <img
-            src="../assets/Bio.jpg"
+            src="/kripal-krishna-singh/assets/Bio.jpg"
             alt="Profile"
             className="w-48 h-48 rounded-full object-cover shadow-lg"
           />
