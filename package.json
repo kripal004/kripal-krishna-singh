@@ -2,6 +2,7 @@
   "name": "portfolio-site",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://kripal004.github.io/kripal-krishna-singh",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
